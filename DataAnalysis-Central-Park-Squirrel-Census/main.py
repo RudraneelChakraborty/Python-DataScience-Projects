@@ -17,4 +17,14 @@ Dict_On_Fur_Color = {
 df = pd.DataFrame(Dict_On_Fur_Color)
 df.to_csv('squirrel_fur_count.csv')
 
-#Average age of Squirrels
+#Age of Squirrels Count
+Adult_count = len(data[data['Age'] == 'Adult'])
+Juvenile_count = len(data[data['Age'] == 'Juvenile'])
+
+Dict_On_Age = {
+        "Age" : ["Adult" , "Juvenile"],
+        "Count": [Adult_count,Juvenile_count]
+    }
+
+df = pd.DataFrame(Dict_On_Age)
+df.to_csv('squirrel_Age_count.csv')
