@@ -16,3 +16,5 @@ __This project used the Pandas-Datareader library to get stock information for t
 The Financial Stock Market values for a stock depend on public sentiment as well as the Condition of the Financial Market for that year.
 From December 2007 to June 2009, The Great Recession happened in the US, which resulted in stock value crashes. Here to analyze the 
 financial stock data we took 6 Bank Stocks and will check how that was react though out the Years.
+
+And will make a Decision out of that, If the Stock Market is really dependent on Public Sentiment or Market/ Financial Condition or not.
