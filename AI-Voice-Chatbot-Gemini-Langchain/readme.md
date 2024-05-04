@@ -12,7 +12,7 @@ In the ChatApp some can type along with someone can use by giving voice prompt. 
 * pip install -r requirements.txt
 * streamlit run app.py
 
-# Notes ->
+# Notes 
 *  As, this is going to run in streamlit sometime the UI might break, Later on I will create a React App to make adjustments. But the skeliton will help anyone if somebody wanted to build Context Aware AI Voice Assistant with memory for better conversation experience.
 *  Right now, I haven't handled any exception, So sometime it might show issues while creating audio files or reading audio files, Anytime that happen delete the file
  from directory and rerun the app.
