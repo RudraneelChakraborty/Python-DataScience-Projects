@@ -10,6 +10,7 @@ In the ChatApp some can type along with someone can use by giving voice prompt. 
 
 # Steps to run 
 * pip install -r requirements.txt
+* inside .env file put your own Google AI Studio API token.
 * streamlit run app.py
 
 # Notes 
