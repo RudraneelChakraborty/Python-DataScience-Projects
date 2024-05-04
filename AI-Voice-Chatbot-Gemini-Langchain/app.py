@@ -92,7 +92,6 @@ if st.session_state['audio_recorded'] :
             st.chat_message(ASSISTANT).write(response)
     del audio_bytes
 
-    st.write(response)
     with st.spinner('Creating Audio Transcribe..'):
         audio = utils.text_to_speech(response)
         utils.autoplay_audio(audio)
