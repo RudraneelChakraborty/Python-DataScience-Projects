@@ -1,0 +1,8 @@
+torch
+SpeechRecognition
+streamlit
+langchain-google-genai
+langchain
+dotenv
+audio-recorder-streamlit
+streamlit-float
