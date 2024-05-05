@@ -3,6 +3,6 @@ SpeechRecognition
 streamlit
 langchain-google-genai
 langchain
-dotenv
+python-dotenv
 audio-recorder-streamlit
 streamlit-float
