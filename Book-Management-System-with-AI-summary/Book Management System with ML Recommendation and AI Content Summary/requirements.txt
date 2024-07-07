@@ -1,0 +1,12 @@
+langchain
+langchain-community
+oracledb
+fastapi
+uvicorn
+pydantic
+fuzzywuzzy
+python-Levenshtein
+scikit-learn
+pandas
+numpy
+wikipedia
