@@ -1,5 +1,7 @@
 **Book Management System with AI summary and Recommendation based on Book Genre**
 
+The Dataset used from Kaggle -> https://www.kaggle.com/datasets/arashnic/book-recommendation-dataset
+
 Steps to run ->
 1. Through Direct Run ->
    a. Create a virtual environment.
