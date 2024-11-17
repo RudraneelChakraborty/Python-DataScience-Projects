@@ -1,0 +1,38 @@
+1.Create conda Environment and activate it
+
+ conda create -n envname python=3.9 ipykernel 
+### (it will create a conda env named envname and install python version 3.9 and a ipykernel inside this environment)
+
+###Activate the environment 
+
+conda activate envname
+
+####add newly created environment to the notebook as kernel 
+
+python -m ipykernel install --user --name=envname
+
+###install notebook inside the environment 
+
+pip install notebook
+
+####Now install all required dependencies to run this notebook
+
+pip install pandas
+pip install numpy
+pip install scikit-learn
+pip install imblearn
+pip install matplotlib
+pip install mlflow
+
+2.Train a Basic Machine Learning classifier using Random Forest
+3.Create experiment with basic classifier and records metrics
+4.Fine tune the model using hyper parameter tuning random search CV method
+5.Create another experiment and log all hyper parameters, metrics, and artifacts which contains model, roc_auc curve PNG, confusion Matrix PNG.
+
+
+### To start MLflow UI
+### Goto your experiment directory using anaconda prompt and execute command 
+
+mlflow ui
+
+## this will start mlflow server https:127.0.0.1:5000
