@@ -1,0 +1,83 @@
+Softwares to install
+
+VSCODE
+Docker Desktop
+
+Model Deployment Steps
+
+1. Create a Docker File
+2. Build Docker file to generate docker image (Docker desktop must be running)
+3. Create and run the container using image build in above step
+4. Test the API by sending test data for prediction
+5. Test the API using CURL request and test data as a csv file
+6. See the inside container terminal
+
+
+1.Create conda Environment and activate it
+
+ conda create -n envname python=3.9 ipykernel 
+### (it will create a conda env named envname and install python version 3.9 and a ipykernel inside this environment)
+
+###Activate the environment 
+
+conda activate envname
+
+####add newly created environment to the notebook as kernel 
+
+python -m ipykernel install --user --name=envname
+
+###install notebook inside the environment 
+
+pip install notebook
+
+
+
+Deployment Steps
+
+1. open folder flaskapi in vscode
+2. open terminal and type command to create virtual environment
+    python -m venv newenv
+
+3. Activate virtual environment  [cd Scripts\Activate]
+
+4. pip install flask
+   pip insatll pandas
+   pip insatll joblib
+   pip install scikit-learn
+
+5. run app locally
+   python app.py
+   
+    see the output using localhost:5002
+
+## To create a docker image from VScode
+
+1. Install docker extension to vscode
+2. press CTRL+SHIFT+P 
+3. select Add Docker file
+4. select python flask
+5. select app.py
+6. select 5002
+7. select No to compose
+
+See the docker file created, make some changes, It will look like this
+
+FROM python:3.10-slim
+EXPOSE 5002
+WORKDIR /app
+COPY . /app
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+CMD ["gunicorn", "--bind", "0.0.0.0:5002", "app:app"]
+
+
+
+6. Create Docker image using following commands [on terminal]
+
+  docker build -t mldekerimg:v1 .
+
+7. run docker image
+  
+  docker run -dp 8081:5002 -ti --name mlcontainer mldockerimg:v1
+
+8. see the output using localhost:8081
